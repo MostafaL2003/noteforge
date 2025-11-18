@@ -31,4 +31,9 @@ class NotesCubit extends Cubit<NotesState> {
     await _db.addNote(newNote);
     loadNotes();
   }
+
+  Future<void> deleteNote(Note note) async {
+    await _db.deleteNote(note);
+    loadNotes();
+  }
 }

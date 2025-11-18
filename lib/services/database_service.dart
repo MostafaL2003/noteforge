@@ -17,4 +17,8 @@ class DatabaseService {
   Future<void> addNote(Note note) async {
     await _notesbox.add(note);
   }
+  Future<void> deleteNote(Note note) async {
+    await note.delete(); 
+  }
+  
 }
